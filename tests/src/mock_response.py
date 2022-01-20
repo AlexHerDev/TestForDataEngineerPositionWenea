@@ -1,12 +1,11 @@
-
 import asyncio
 
 
-class MockResponse():
+class MockResponse:
     def __init__(self, text, status):
         super().__init__()
-        self._text = ""
-        self.status = 200
+        self._text = text
+        self.status = status
 
     async def text(self):
         return self._text
@@ -19,4 +18,3 @@ class MockResponse():
 
     async def __aenter__(self):
         return self
-
